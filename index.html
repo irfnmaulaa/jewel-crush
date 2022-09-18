@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jewel Crush</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main id="main" class="main">
+
+        <!-- S: App-->
+        <div id="app" class="app">
+
+            <!-- S: Intro -->
+            <section class="intro screen" id="intro">
+
+                <h1>JEWEL CRUSH</h1>
+                <div>
+                    <h4>How to play :</h4>
+                    <ol>
+                        <li>Pressing the “Start Game” button in the initial screen. </li>
+                        <li>Countdown will begin from 3 before the game start.</li>
+                        <li>You can click on any jewel to choose it. </li>
+                        <li>If three or more jewels of the same color and shape, you can get score. </li>
+                    </ol>
+                </div>
+                <div>
+                    <input type="text" class="form" id="intro-name" placeholder="Enter Your Name" />
+                    <button class="btn" id="intro-play">Start Game</button>
+                </div>
+
+            </section>
+
+            <!-- S: Countdown -->
+            <section class="countdown screen" id="countdown">
+                <h2>Game will be start on</h2>
+                <div class="countdown-number" id="countdown-number">3</div>
+            </section>
+
+            <!-- S: Game -->
+            <section class="game screen" id="game">
+                <div class="game-box" id="game-box">
+
+                </div>
+                <div class="game-board" id="game-board">
+                    <h2>JEWEL CRUSH</h2>
+                    <div class="game-hut">
+                        <div class="game-hut">
+                            <span>Your Name</span>
+                            <h2 id="game-name">Irfan</h2>
+                        </div>
+                        <div class="game-hut">
+                            <span>Timer</span>
+                            <h2 class="game-number" id="game-timer">30</h2>
+                        </div>
+                        <div class="game-hut">
+                            <span>Score</span>
+                            <h2 class="game-number" id="game-score">0</h2>
+                        </div>
+                    </div>
+                    <button class="btn" id="game-toggle-music" data-state="play">Pause Music</button>
+                </div>
+                <div class="game-result" id="game-result">
+                    <div class="game-hut">
+                        <h1 style="margin-bottom: 1.5rem">GAME OVER</h1>
+                        <div style="margin-bottom: 1rem" id="game-desc" class="game-desc"></div>
+                    </div>
+                    <div class="game-hut">
+                        <button class="btn" id="game-quit" style="margin-right: 1.5rem">Quit Game</button>
+                        <button class="btn" id="game-play" style="margin-right: 1.5rem">Play Again</button>
+                        <button class="btn" id="game-ranking">View Ranking</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- S: Ranking -->
+            <section class="ranking screen" id="ranking">
+                <h1 style="margin-bottom: 3rem">JEWEL CRUSH</h1>
+                <h3>Table Ranking</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-table">
+                    </tbody>
+                </table>
+                <div>
+                    <button class="btn" id="ranking-play" style="margin-right: 1.5rem">Play Again</button>
+                    <button class="btn" id="ranking-quit">Quit Game</button>
+                </div>
+            </section>
+
+        </div>
+        <!-- E: App-->
+
+    </main>
+
+    <script src="js/App.js" type="module"></script>
+</body>
+</html>
